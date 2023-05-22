@@ -140,6 +140,8 @@ workflows:
     platform: azure
   cucushift-installer-rehearse-azure-ipi-workers-rhel8:
     platform: azure
+  cucushift-installer-rehearse-azure-ipi-sno:
+    platform: azure
   cucushift-installer-rehearse-azure-upi:
     platform: azure
   cucushift-installer-rehearse-azure-upi-disconnected:
@@ -203,6 +205,8 @@ workflows:
   cucushift-installer-rehearse-gcp-ipi-workers-rhel8:
     platform: gcp
   cucushift-installer-rehearse-gcp-ipi-workers-rhel8-fips:
+    platform: gcp
+  cucushift-installer-rehearse-gcp-ipi-sno:
     platform: gcp
   cucushift-installer-rehearse-gcp-upi:
     platform: gcp
