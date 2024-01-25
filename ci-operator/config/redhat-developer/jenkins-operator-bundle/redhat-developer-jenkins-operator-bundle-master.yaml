@@ -31,11 +31,12 @@ images:
         source_path: /registry/index.db
   to: jenkins-operator-index
 promotion:
-  excluded_images:
-  - jenkins-operator-index-base
-  - jenkins-operator-index-intermediate
-  name: jenkins-operator-bundle
-  namespace: redht-developer
+  to:
+  - excluded_images:
+    - jenkins-operator-index-base
+    - jenkins-operator-index-intermediate
+    name: jenkins-operator-bundle
+    namespace: redht-developer
 releases:
   initial:
     integration:

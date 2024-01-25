@@ -53,9 +53,10 @@ operator:
   - pullspec: quay.io/openshift/origin-metallb-frr:4.14
     with: pipeline:metallb-frr
 promotion:
-  disabled: true
-  name: 4.15-priv
-  namespace: ocp-private
+  to:
+  - disabled: true
+    name: 4.15-priv
+    namespace: ocp-private
 releases:
   initial:
     integration:

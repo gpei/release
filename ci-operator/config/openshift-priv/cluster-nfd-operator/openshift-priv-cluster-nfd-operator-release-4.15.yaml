@@ -27,9 +27,10 @@ operator:
   - context_dir: manifests/stable
     dockerfile_path: bundle.Dockerfile
 promotion:
-  disabled: true
-  name: 4.15-priv
-  namespace: ocp-private
+  to:
+  - disabled: true
+    name: 4.15-priv
+    namespace: ocp-private
 releases:
   initial:
     integration:

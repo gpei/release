@@ -22,11 +22,12 @@ operator:
   - pullspec: quay.io/konveyor/oadp-operator:oadp-1.3
     with: oadp-operator-1.3
 promotion:
-  additional_images:
-    oadp-operator-1.3: oadp-operator-1.3
-    test-oadp-operator-1.3: test-oadp-operator-1.3
-  name: oadp-operator
-  namespace: konveyor
+  to:
+  - additional_images:
+      oadp-operator-1.3: oadp-operator-1.3
+      test-oadp-operator-1.3: test-oadp-operator-1.3
+    name: oadp-operator
+    namespace: konveyor
 releases:
   latest:
     release:

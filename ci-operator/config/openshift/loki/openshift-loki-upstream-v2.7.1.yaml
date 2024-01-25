@@ -28,8 +28,9 @@ images:
       - registry.ci.openshift.org/ocp/builder:rhel-8-golang-1.19-openshift-4.12
   to: promtail
 promotion:
-  name: v2.7.1
-  namespace: logging
+  to:
+  - name: v2.7.1
+    namespace: logging
 releases:
   latest:
     release:

@@ -745,8 +745,9 @@ images:
         source_path: /usr/bin/oc
   to: multi-arch-builder-controller
 promotion:
-  namespace: ci
-  tag: latest
+  to:
+  - namespace: ci
+    tag: latest
 resources:
   '*':
     requests:

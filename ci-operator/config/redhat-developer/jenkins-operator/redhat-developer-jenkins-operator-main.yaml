@@ -16,8 +16,9 @@ images:
         source_path: /go/src/github.com/redhat-developer/jenkins-operator/.
   to: jenkins-operator
 promotion:
-  name: jenkins-operator
-  namespace: redht-developer
+  to:
+  - name: jenkins-operator
+    namespace: redht-developer
 releases:
   initial:
     integration:

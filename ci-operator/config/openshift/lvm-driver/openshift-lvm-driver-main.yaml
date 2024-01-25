@@ -14,9 +14,10 @@ images:
   from: ubi_minimal
   to: lvm-driver
 promotion:
-  namespace: ocp
-  tag: "4.14"
-  tag_by_commit: true
+  to:
+  - namespace: ocp
+    tag: "4.14"
+    tag_by_commit: true
 releases:
   initial:
     integration:
