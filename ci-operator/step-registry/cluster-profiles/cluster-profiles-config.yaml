@@ -339,6 +339,8 @@
         - aws-load-balancer-operator
         - rosa
         - external-dns-operator
+        - installer
+        - release
     - org: openshift-priv
       repos:
         - openshift-tests-private
@@ -348,6 +350,7 @@
         - aws-ebs-csi-driver-operator
         - aws-efs-csi-driver-operator
         - cloud-credential-operator
+        - installer
     - org: openshift-eng
       repos:
         - ocp-qe-perfscale-ci
@@ -451,6 +454,7 @@
         - openshift-tests-private
         - verification-tests
         - release
+        - installer
         - gcp-pd-csi-driver
         - gcp-pd-csi-driver-operator
         - gcp-filestore-csi-driver-operator
@@ -459,6 +463,7 @@
     - org: openshift-priv
       repos:
         - openshift-tests-private
+        - installer
         - gcp-pd-csi-driver
         - gcp-pd-csi-driver-operator
         - gcp-filestore-csi-driver-operator
