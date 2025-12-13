@@ -1355,7 +1355,7 @@ tests:
   as: e2e-azure-confidentialvm-vmgueststateonly
   optional: true
   steps:
-    cluster_profile: azure4
+    cluster_profile: azure-qe
     env:
       AZURE_INSTALL_USE_MINIMAL_PERMISSIONS: "yes"
       AZURE_SECURITY_TYPE: ConfidentialVM
@@ -1372,6 +1372,8 @@ tests:
     - chain: ipi-install
     - chain: cucushift-installer-check
     - ref: cucushift-installer-check-azure-confidential
+    test:
+    - ref: openshift-e2e-test
 - as: gcp-private
   optional: true
   run_if_changed: (gcp|google)
