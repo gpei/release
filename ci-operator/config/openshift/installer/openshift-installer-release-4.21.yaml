@@ -1351,6 +1351,27 @@ tests:
     - chain: ipi-install
     - ref: ipi-azure-rbac
     - ref: cucushift-installer-check-azure-osimage
+- always_run: false
+  as: e2e-azure-confidentialvm-vmgueststateonly
+  optional: true
+  steps:
+    cluster_profile: azure4
+    env:
+      AZURE_INSTALL_USE_MINIMAL_PERMISSIONS: "yes"
+      AZURE_SECURITY_TYPE: ConfidentialVM
+      ENABLE_CONFIDENTIAL_COMPUTE: "true"
+      ENABLE_CONFIDENTIAL_CONTROL_PLANE: "true"
+      ENABLE_ENCRYPTIONATHOST_CONTROL_PLANE: "false"
+      OS_DISK_SECURITY_ENCRYPTION_TYPE: VMGuestStateOnly
+    post:
+    - chain: cucushift-installer-rehearse-azure-ipi-deprovision
+    pre:
+    - chain: ipi-conf-azure
+    - ref: ipi-conf-azure-confidential
+    - chain: azure-provision-service-principal-minimal-permission
+    - chain: ipi-install
+    - chain: cucushift-installer-check
+    - ref: cucushift-installer-check-azure-confidential
 - as: gcp-private
   optional: true
   run_if_changed: (gcp|google)
